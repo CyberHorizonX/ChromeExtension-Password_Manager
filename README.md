@@ -1,7 +1,7 @@
-# SafePassExtension
+# Password_Manager
 The password management chrome extension provides a user-friendly interface for managing passwords.
 
-# SafePassExtension (Chrome Extension)
+# Password_Manager (Chrome Extension)
 
 This document provides a comprehensive overview Extension responsible for a password management application. The application allows users to generate, store, retrieve, update, and delete passwords securely.
 
@@ -11,7 +11,6 @@ This document provides a comprehensive overview Extension responsible for a pass
     - [showAlert](#showalert)
     - [update](#update)
     - [checknSave_password](#checknsave_password)
-- [Event Listeners](#event-listeners)
 - [Overall Functionality](#overall-functionality)
 
 ## Variables
