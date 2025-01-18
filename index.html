@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Vault</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+        <!-- code for prompt -->
+        <div id="custom-prompt" class="prompt hidden">
+            <div class="prompt-box">
+                <p class="prompt-message">Please enter your vault password</p>
+                <input type="password" id="prompt-input" class="prompt-input">
+                <div class="prompt-actions">
+                    <button id="prompt-ok" class="prompt-btn">OK</button>
+                    <button id="prompt-cancel" class="prompt-btn cancel-btn">Cancel</button>
+                </div>
+            </div>
+        </div>
+        <!-- custom alert message -->
+        <div id="custom-alert" class="hidden">
+            <div class="alert-box">
+                <p id="alert-message"></p>
+                <button id="alert-close">Close</button>
+            </div>
+        </div>  
+        <!-- for updating the password -->
+        <div id="update-custom-alert" class="hidden">
+            <div class="update-alert-box">
+                <p id="update-alert-message"></p>
+                <button id="update-alert-update">Update</button>
+                <button id="update-alert-close">Close</button>
+            </div>
+        </div>  
+    
+        <!-- code for password-vault -->
+    <div class="vault-container" id="vault-container">
+        <h1 class="vault-title">Password Vault</h1>
+        <div class="generate-vault">
+            <button class="btn generate-password-btn" id="generate-password-btn">Generate Password</button>
+            <button class="btn download-password-btn" id="download-password-btn">Download Password</button>
+            <!-- custom-range for password length -->
+            <div class="custom-range-container">
+                <label for="custom-range" class="range-label">Password Length</label>
+                <input type="range" id="custom-range" class="custom-range" min="0" max="32" step="1" value="13">
+                <span id="range-value" class="range-value">13</span>
+            </div>
+            <input type="text" name="generate-password" id="generated-password" class="input-field" placeholder="Your Password is here!" readonly>
+        </div>
+
+        <div class="vault-form">
+            <input type="text" id="save_website" placeholder="Enter Website (eg. example.com)" class="input-field">
+            <input type="password" id="password" placeholder="Password" class="input-field">
+            <button class="btn save-btn" id="save-btn">Save Password</button>
+        </div>
+        <div class="vault-search">
+            <input type="text" id="search" placeholder="Search/Delete Password (eg. website name)" class="input-field">
+            <div class="vault-search-btn">
+                <button class="btn search-btn" id="search-btn">Search</button>
+                <button class="btn delete-btn" id="delete-btn">Delete</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

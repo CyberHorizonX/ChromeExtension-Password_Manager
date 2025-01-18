@@ -1,0 +1,316 @@
+/* General Styling for prompt */
+/* Prompt Overlay */
+.prompt {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Prompt Box */
+.prompt-box {
+    background: #2c3e50;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    width: 90%;
+    max-width: 300px;
+}
+
+.prompt-message {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    color: #ecf0f1;
+}
+
+.prompt-input {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    background: #34495e;
+    color: #ecf0f1;
+    font-size: 1em;
+}
+
+/* Buttons */
+.prompt-actions {
+    display: flex;
+    justify-content: space-around;
+}
+
+.prompt-btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    background: #3498db;
+    color: #fff;
+    transition: background 0.3s ease;
+}
+
+.prompt-btn:hover {
+    background: #8e44ad;
+}
+
+.cancel-btn {
+    background: #e74c3c;
+}
+
+.cancel-btn:hover {
+    background: #c0392b;
+}
+
+/* General Styling for Custom Alert Box */
+/* Custom Alert Styling */
+#custom-alert {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 9999;
+    color: white;
+    text-align: center;
+}
+
+.alert-box {
+    background-color: #34495e;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+#alert-message {
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+#alert-close {
+    padding: 10px 20px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#alert-close:hover {
+    background-color: #c0392b;
+}
+
+/* General Styling for Password Vault */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #3498db, #8e44ad);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    width: 350px;
+}
+
+.vault-container {
+    background: #2c3e50;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    padding: 30px 40px;
+    width: 90%;
+    max-width: 420px;
+    text-align: center;
+}
+
+.vault-title {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-size: 2em;
+    animation: slideIn 0.8s ease-out;
+}
+
+/* Form Styling */
+.vault-form, .vault-search {
+    margin-bottom: 20px;
+}
+
+.vault-search-btn {
+    display: flex;
+}
+
+.input-field {
+    width: 80%;
+    padding: 12px;
+    margin: 12px 0;
+    border: none;
+    border-radius: 6px;
+    outline: none;
+    font-size: 1em;
+    background: #34495e;
+    color: #ecf0f1;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.input-field:focus {
+    transform: scale(1.05);
+    background: #1abc9c;
+}
+
+.btn {
+    background: #3498db;
+    color: #fff;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+    background: #8e44ad;
+    transform: translateY(-3px);
+}
+
+.generate-password-btn, .download-password-btn {
+    margin-right: 10px;
+    width: 45%;
+}
+
+.save-btn {
+    width: 80%;
+}
+
+.vault-search-btn {
+    display: inline;
+}
+
+.search-btn, .delete-btn {
+    width: 45%;
+    margin-left: 5px;
+}
+
+/* Results Section */
+.vault-results {
+    animation: fadeIn 1s ease-in;
+}
+
+.results-title {
+    margin-bottom: 15px;
+    font-size: 1.7em;
+}
+
+.password-list {
+    list-style: none;
+    padding: 0;
+}
+
+.password-list li {
+    background: #34495e;
+    margin: 12px 0;
+    padding: 12px;
+    border-radius: 6px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.password-list li:hover {
+    transform: scale(1.03);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Animations */
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Custom Range Styling */
+.custom-range-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.range-label {
+    font-size: 16px;
+    margin-bottom: 12px;
+    color: #ecf0f1;
+}
+
+.custom-range {
+    -webkit-appearance: none;
+    width: 300px;
+    height: 12px;
+    background: #bdc3c7;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.custom-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #27ae60;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.custom-range::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #27ae60;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.custom-range:hover::-webkit-slider-thumb {
+    background: #2ecc71;
+}
+
+.custom-range::-webkit-slider-runnable-track {
+    height: 12px;
+    background: #bdc3c7;
+    border-radius: 5px;
+}
+
+.range-value {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #ecf0f1;
+}
