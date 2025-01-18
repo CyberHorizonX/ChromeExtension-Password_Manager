@@ -56,4 +56,5 @@ The password management application provides a user-friendly interface for manag
 This documentation serves as a guide for understanding the code structure and functionality of the application, allowing developers to modify or extend its features as needed.
 
 ## 
+The is using Base64 encryption.
 you can add your own encryption algorithm instead.
