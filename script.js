@@ -50,7 +50,7 @@ update_alert_update.addEventListener('click', ()=>{
 
     console.log(`website : ${website}  password after : ${btoa(password)}`);
     localStorage.setItem(`${website}`,`${btoa(password)}`);
-    showAlert('Password Updated Successfully 🙂');
+    showAlert('Password Updated Successfully');
     alertContainer.style.display = 'none';
 });
 
@@ -87,7 +87,7 @@ function postPromptActions(isSuccess) {
         generate_password_btn.addEventListener('click', ()=>{
         
             if(length <= 7){
-                showAlert(`Length must be 8-32 🙂`);
+                showAlert(`Length must be 8-32`);
             }else{
                 const lower = "abcdefghijklmnopqrstuvwxyz";
                 const upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -133,7 +133,7 @@ function postPromptActions(isSuccess) {
            
             if(!website){
                 localStorage.setItem(`${key}`,`${btoa(value)}`);
-                showAlert("Password saved Successfully!👍");
+                showAlert("Password saved Successfully!");
             }else{
                 update(key, value);
               
@@ -148,7 +148,7 @@ function postPromptActions(isSuccess) {
            
                 document.getElementById('search').value = atob(password);
             }else{
-                document.getElementById('search').value = "No Password Found😟";
+                document.getElementById('search').value = "No Password Found";
             }
         });
      
@@ -159,9 +159,9 @@ function postPromptActions(isSuccess) {
             if(password){
                 localStorage.removeItem(`${search}`);
                 document.getElementById('search').value = '';
-                showAlert('Password Deleted 😊');
+                showAlert('Password Deleted');
             }else{
-                document.getElementById('search').value = "No website Found😟";
+                document.getElementById('search').value = "No website Found";
             }
         });
      
@@ -199,7 +199,7 @@ function checknSave_password(enteredPassword) {
     if (!savedPassword) {
        
         localStorage.setItem('Password', `${btoa(enteredPassword)}`);
-        showAlert(`Vault Password set successfully! 😀${enteredPassword}`);
+        showAlert(`Vault Password set successfully! ${enteredPassword}`);
         vaultContainer.style.display = 'block';
         hidePrompt(); 
         postPromptActions(true);
@@ -210,7 +210,7 @@ function checknSave_password(enteredPassword) {
             hidePrompt(); 
             postPromptActions(true);
         } else {
-            showAlert('Incorrect Password. Try again.😵‍💫');
+            showAlert('Incorrect Password. Try again.');
             promptInput.value = ''; 
             postPromptActions(false);
         }
