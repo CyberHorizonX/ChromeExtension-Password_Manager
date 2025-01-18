@@ -1,8 +1,8 @@
 {
     "manifest_version": 3,
-    "name": "Password Generator",
+    "name": "SafePassExtension (chrome extension)",
     "version": "1.0",
-    "description": "A simple password generator.",
+    "description": "A simple chrome extension where you manage your passwords.",
     "action": {
       "default_popup": "index.html",
       "default_icon": {
